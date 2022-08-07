@@ -2,6 +2,6 @@
 {
     public static class DbConfig
     {
-        public const string CONNECTION_STRING_ORDERS_DB = "RentACarDB";
+        public const string CONNECTION_STRING_DB = "RentACarDB";
     }
 }

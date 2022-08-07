@@ -23,6 +23,11 @@ namespace Bookings.Persistence
 
         }
 
+        public RentACarDBContext()
+        {
+
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
@@ -33,7 +38,7 @@ namespace Bookings.Persistence
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer(_configuration.GetConnectionString(DbConfig.CONNECTION_STRING_ORDERS_DB));
+                optionsBuilder.UseSqlServer(_configuration.GetConnectionString(DbConfig.CONNECTION_STRING_DB));
         }
     }
 }

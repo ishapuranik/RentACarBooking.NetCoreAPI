@@ -52,10 +52,8 @@ namespace Booking
 
             ConfigureSwagger(services);
 
-            ConfigurePersistance(services);
-
             services.AddScoped<ILogWrapper, NLogWrapper>((ctx) =>
-                new NLogWrapper(Configuration.GetConnectionString(DbConfig.CONNECTION_STRING_ORDERS_DB)));
+                new NLogWrapper(Configuration.GetConnectionString(DbConfig.CONNECTION_STRING_DB)));
 
             services.AddScoped<ErrorHandlingMiddleware>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
@@ -69,6 +67,9 @@ namespace Booking
             ConfigureValidators(services);
             ConfigureAutoMapper(services);
             ConfigureRepositories(services);
+
+            ConfigurePersistance(services);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -163,10 +164,9 @@ namespace Booking
         private void ConfigurePersistance(IServiceCollection services)
         {
             services.AddDbContext<RentACarDBContext>(option =>
-            {
-                option = new DbContextOptionsBuilder<RentACarDBContext>()
-                    .UseSqlServer(Configuration.GetConnectionString(DbConfig.CONNECTION_STRING_ORDERS_DB));
-            });
+                  option = new DbContextOptionsBuilder<RentACarDBContext>()
+                    .UseSqlServer(Configuration.GetConnectionString(DbConfig.CONNECTION_STRING_DB))
+            ) ;
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
