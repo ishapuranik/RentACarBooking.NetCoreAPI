@@ -46,7 +46,10 @@ namespace Booking
                     .AllowCredentials());
             });
 
-            services.AddControllers().AddNewtonsoftJson();
+            services.AddControllers().AddNewtonsoftJson((options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            ));
+
             ConfigureSwagger(services);
 
             ConfigurePersistance(services);

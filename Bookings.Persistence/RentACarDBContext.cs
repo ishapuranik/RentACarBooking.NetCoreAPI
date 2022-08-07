@@ -16,6 +16,13 @@ namespace Bookings.Persistence
             _configuration = configuration;
         }
 
+        public RentACarDBContext(
+            DbContextOptions<RentACarDBContext> dbContextOptions)
+            : base(dbContextOptions)
+        {
+
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
