@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MMTECommerce.Shared\Bookings.Shared.csproj" />
+    <ProjectReference Include="..\Bookings.Shared\Bookings.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.API", "MMT.ECommerce.API\Bookings.API.csproj", "{F07A85AB-2A39-4E84-958B-5080ACB533C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.API", "Bookings.API\Bookings.API.csproj", "{F07A85AB-2A39-4E84-958B-5080ACB533C2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.Shared", "MMTECommerce.Shared\Bookings.Shared.csproj", "{D586E1C5-9DDC-49D1-8297-65F11F4CEE35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.Shared", "Bookings.Shared\Bookings.Shared.csproj", "{D586E1C5-9DDC-49D1-8297-65F11F4CEE35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.Services", "MMTECommerce.Services\Bookings.Services.csproj", "{BC76F46F-D91F-4D04-8338-281F45DCE973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.Services", "Bookings.Services\Bookings.Services.csproj", "{BC76F46F-D91F-4D04-8338-281F45DCE973}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.Persistence", "MMTEcommerce.Persistence\Bookings.Persistence.csproj", "{E13D07DD-9C38-4428-8BA6-2BCBFB5B3F12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.Persistence", "Bookings.Persistence\Bookings.Persistence.csproj", "{E13D07DD-9C38-4428-8BA6-2BCBFB5B3F12}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.Domain", "MMTECommerce.Domain\Bookings.Domain.csproj", "{704728C1-5466-491B-A564-D88DED265546}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookings.Domain", "Bookings.Domain\Bookings.Domain.csproj", "{704728C1-5466-491B-A564-D88DED265546}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingsAPI.Tests", "MMT.ECommerce.Tests\BookingsAPI.Tests.csproj", "{3DD2714F-2859-4526-98F8-967F32AA62A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingsAPI.Tests", "Bookings.Tests\BookingsAPI.Tests.csproj", "{3DD2714F-2859-4526-98F8-967F32AA62A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

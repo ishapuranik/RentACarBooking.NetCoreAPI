@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MMTECommerce.Domain\Bookings.Domain.csproj" />
-    <ProjectReference Include="..\MMTEcommerce.Persistence\Bookings.Persistence.csproj" />
-    <ProjectReference Include="..\MMTECommerce.Shared\Bookings.Shared.csproj" />
+    <ProjectReference Include="..\Bookings.Domain\Bookings.Domain.csproj" />
+    <ProjectReference Include="..\Bookings.Persistence\Bookings.Persistence.csproj" />
+    <ProjectReference Include="..\Bookings.Shared\Bookings.Shared.csproj" />
   </ItemGroup>
 
 </Project>

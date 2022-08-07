@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MMT.ECommerce.API\Bookings.API.csproj" />
+    <ProjectReference Include="..\Bookings.API\Bookings.API.csproj" />
   </ItemGroup>
 
 </Project>

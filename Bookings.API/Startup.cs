@@ -16,6 +16,8 @@ using Bookings.Persistence.Repositories.Renters;
 using Bookings.Domain.Repositories.BookingStatuses;
 using Bookings.Domain.Repositories.Vehicles;
 using Bookings.Domain.Repositories.VehicleTypes;
+using Bookings.Services;
+using Bookings.Domain.Repositories.Bookings;
 
 namespace Booking
 {
@@ -57,7 +59,8 @@ namespace Booking
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
             services.AddScoped<IConfigWrapper, ConfigWrapper>();
-
+            services.AddScoped<IBookingService, BookingService>();
+            
             ConfigureApis(services);
             ConfigureAuthorization(services);
             ConfigureValidators(services);
@@ -123,6 +126,7 @@ namespace Booking
             services.AddScoped<IBookingStatusRepository, BookingStatusRepository>();
             services.AddScoped<IVehicleRepository, VehicleRepository>();
             services.AddScoped<IVehicleTypeRepository, VehicleTypeRepository>();
+            services.AddScoped<IBookingRepository, BookingRepository>();
         }
 
         private void ConfigureAutoMapper(IServiceCollection services)
