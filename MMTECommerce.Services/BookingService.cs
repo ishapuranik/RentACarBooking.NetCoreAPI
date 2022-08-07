@@ -2,6 +2,7 @@
 using Bookings.Domain.Repositories.Vehicles;
 using Bookings.Persistence.Repositories.Renters;
 using Bookings.Shared.Dtos;
+using Bookings.Shared.Enums;
 using Bookings.Shared.Persistence;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,7 @@ namespace Bookings.Services
             if (booking == null)
                 throw new KeyNotFoundException($"Booking record having ID {bookingID} not found.");
 
-            booking.BookingStatusID = 2; //ToDo : Use Enum here
+            booking.BookingStatusID = (int) EnumBookingStatus.Confirmed;
             _bookingRepository.Update(booking);
         }
 
@@ -58,7 +59,8 @@ namespace Bookings.Services
                                                                 x.RenterEndDate.Date <= request.RenterEndDate.Date)
                                                                 ||
                                                                 (x.RenterStartDate.Date == request.RenterEndDate.Date)) && 
-                                                                x.BookingStatusID == 1); //ToDo: Create BookingStatusEnum
+                                                                (x.BookingStatusID == (int)EnumBookingStatus.Confirmed ||
+                                                                x.BookingStatusID == (int)EnumBookingStatus.Reserved)); 
 
             if (bookings != null || bookings.Any())
                 bookedFleetQuantity = bookings.Count();
@@ -70,7 +72,7 @@ namespace Bookings.Services
             {
                 VehicleID = request.VehicleID,
                 RenterID = request.RenterID,
-                BookingStatusID = 1, //toDo: use enum here 
+                BookingStatusID = (int)EnumBookingStatus.Reserved, 
                 Reference = request.Reference,
                 RenterStartDate = request.RenterStartDate,
                 RenterEndDate = request.RenterEndDate,

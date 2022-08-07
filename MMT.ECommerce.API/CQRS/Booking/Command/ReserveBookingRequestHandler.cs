@@ -29,10 +29,10 @@ namespace Bookings.API.CQRS.Booking.Command
 
                 if (reserveBookingDto == null)
                 {
-                    _logger.Error($"Failed to register vehicle booking for renter {request.RenterID}. Vehicle record with ID {request.VehicleID} not found.", null);
+                    _logger.Error($"Failed to register vehicle booking for renter {request.RenterID}. Failed to map the request object", null);
                     return new GetReserveBookingCommandResponse()
                     {
-                        Success = bookingID != 0 ? true : false,
+                        Success = false,
                         Message = "Failed to map ReserveBookingRequest object" //Calling server will decide what message should ne displayed to the user or what to do with this message
                     };
                 }

@@ -28,10 +28,20 @@ namespace Bookings.API.CQRS.Booking.Command.ConfirmBooking
             catch (KeyNotFoundException)
             {
                 _logger.Error($"Booking with booking ID {request.BookingID} not found. Cannot confirm the booking.", null);
+                return new GetConfirmBookingResponse()
+                {
+                    Success = false,
+                    Message = $"Booking ID { request.BookingID } is invalid, failed to confirm the booking"
+                };
             }
             catch (Exception ex)
             {
                 _logger.Error($"Failed to confirm vehicle booking having booking ID {request.BookingID}", ex);
+                return new GetConfirmBookingResponse()
+                {
+                    Success = false,
+                    Message = $"Failed to confirm the booking with BookingID {request.BookingID}"
+                };
             }
 
             return new GetConfirmBookingResponse()

@@ -24,8 +24,4 @@
     <ProjectReference Include="..\MMTECommerce.Shared\Bookings.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CQRS\Booking\CommandValidators\" />
-  </ItemGroup>
-
 </Project>

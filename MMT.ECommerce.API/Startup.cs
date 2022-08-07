@@ -48,6 +48,8 @@ namespace Booking
             services.AddControllers().AddNewtonsoftJson();
             ConfigureSwagger(services);
 
+            ConfigurePersistance(services);
+
             services.AddScoped<ILogWrapper, NLogWrapper>((ctx) =>
                 new NLogWrapper(Configuration.GetConnectionString(DbConfig.CONNECTION_STRING_ORDERS_DB)));
 
@@ -60,7 +62,6 @@ namespace Booking
             ConfigureApis(services);
             ConfigureAuthorization(services);
             ConfigureValidators(services);
-            ConfigurePersistance(services);
             ConfigureAutoMapper(services);
             ConfigureRepositories(services);
         }
