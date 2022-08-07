@@ -4,11 +4,6 @@ using Bookings.Persistence;
 using Bookings.Shared.Persistence;
 using Bookings.Tests.Helpers;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace BookingsAPI.Tests.Services

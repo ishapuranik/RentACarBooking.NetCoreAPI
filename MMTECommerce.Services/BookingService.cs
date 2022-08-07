@@ -4,11 +4,6 @@ using Bookings.Persistence.Repositories.Renters;
 using Bookings.Shared.Dtos;
 using Bookings.Shared.Enums;
 using Bookings.Shared.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bookings.Services
 {

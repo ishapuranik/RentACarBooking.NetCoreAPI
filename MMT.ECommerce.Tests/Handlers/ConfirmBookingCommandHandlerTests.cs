@@ -1,17 +1,9 @@
 ﻿using AutoMapper;
-using Bookings.API.CQRS.Booking.Command;
 using Bookings.API.CQRS.Booking.Command.ConfirmBooking;
 using Bookings.Services;
-using Bookings.Shared.Dtos;
 using Bookings.Shared.Log;
-using Bookings.Shared.ResponseModels;
 using FluentAssertions;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 

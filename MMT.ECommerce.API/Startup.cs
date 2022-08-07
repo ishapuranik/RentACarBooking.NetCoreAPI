@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Bookings.API.Core;
 using Bookings.Persistence;
-using Bookings.Services;
 using Bookings.Services.TokenServices;
 using Bookings.Shared.Log;
 using Bookings.Shared.Persistance;
