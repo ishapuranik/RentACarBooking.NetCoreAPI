@@ -12,6 +12,11 @@ namespace Bookings.Persistence.EntityConfiguration
             builder.HasKey(e => e.ID);
             builder.ToTable("Vehicle");
             builder.Property(e => e.ID);
+
+            builder.HasOne<VehicleType>(d => d.VehicleType)
+                .WithMany(g => g.Vehicle)
+                .HasForeignKey(s => s.VehicleTypeID);
+
             builder.HasData(
                             new Vehicle { ID = 1, Make = "Fiat", Model = "500", NumberOfPassengerSeats = 40, VehicleTypeID = 1, StandardPerDayRate = 130.88m, PeakPerDayRate = 145.7m, FleetQuantity = 5 },
                             new Vehicle { ID = 2, Make = "Vauxhall", Model = "Crossland", NumberOfPassengerSeats = 4, VehicleTypeID = 2, StandardPerDayRate = 165.30m, PeakPerDayRate = 180.30m, FleetQuantity = 2 },

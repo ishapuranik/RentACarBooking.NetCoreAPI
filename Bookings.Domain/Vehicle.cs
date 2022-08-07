@@ -17,5 +17,6 @@ namespace Bookings.Domain
         public decimal PeakPerDayRate { get; set; }
         public int FleetQuantity { get; set; }
         public ICollection<Booking> Booking { get; set; }
+        public VehicleType VehicleType { get; set; }
     }
 }
